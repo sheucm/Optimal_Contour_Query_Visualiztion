@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity=
+        "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+        <!-- Include this library for mobile touch support  -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+        <script src="leafletembed.js"></script>
+        <script src="index.js"></script>
+        <script src="SliderControl.js"></script>
+        
+    </head>
+    <body>
+        <style>
+            html,body{
+                height: 100%;
+                width: 100%; 
+            }
+            #content{
+                height: 100%;
+            }
+            #map { 
+                height:85%;
+                width:60%;
+                float: left;
+                margin-left: 2%;
+            } 
+            #description{
+                float: left;
+                height:600px;
+                width:35%;
+                padding-left: 2%;
+            }
+        </style>
+        <nav class="navbar navbar-default navbar-static-top">
+            <span class="navbar-brand" href="#">Spatial Optimal Query</span>
+        </nav>
+        
+        <div id="content">
+            <div id="map"></div>
+            <div id="description">
+              
+               <div class="panel panel-danger">
+                  <div class="panel-heading">
+                    <input id="checkbox_RuleA" name="radio" type="radio">
+                    Case A : 噴藥區
+                  </div>
+                  <div class="panel-body">
+                           9/27~10/3間，大於60歲發病例，固定戶數為500，top3。</br>
+                           (假設一單位m為100戶)
+                   </div>
+               </div>
+               <div class="panel panel-warning">
+                  <div class="panel-heading">
+                    <input id="checkbox_RuleB" name="radio"  type="radio" >
+                    Case B : 噴藥區
+                  </div>
+                  <div class="panel-body">
+                           9/27~10/3間，大於60歲發病例，固定戶數為500，top5。</br>
+                           (假設一單位m為100戶)
+                   </div>
+               </div>
+
+               <div class="panel panel-success">
+                  <div class="panel-heading">
+                    <input id="checkbox_RuleC" name="radio"  type="radio" >
+                    Case C : 噴藥區
+                  </div>
+                  <div class="panel-body">
+                           9/27~10/3間，固定戶數為500，top3。</br>
+                           (假設一單位m為100戶)
+                   </div>
+               </div>
+
+               
+            </div>
+        </div>
+        <div>
+
+        </div>
+        
+         
+        <script>
+        initmap();
+        </script>
+    </body>
+</html>
