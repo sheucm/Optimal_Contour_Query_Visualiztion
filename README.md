@@ -3,5 +3,5 @@
 ### Run the simple server on python
 - sudo python -m SimpleHTTPServer 8000
 
-### Open the index.html by browsers with following url
+### Open the website by browsers with following url
 - http://localhost:8000/index.html
